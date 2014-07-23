@@ -79,7 +79,6 @@ class pdfXBlock(XBlock):
         
         frag = Fragment(html)
         frag.add_css(self.load_resource("static/css/pdf.css"))
-        frag.add_javascript(self.load_resource("static/js/pdf.js"))
         frag.add_javascript(self.load_resource("static/js/pdf_view.js"))
         frag.initialize_js('pdfXBlockInitView')
         return frag
