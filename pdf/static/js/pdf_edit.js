@@ -13,16 +13,17 @@ function pdfXBlockInitEdit(runtime, element) {
             'source_text': $('#pdf_edit_source_text').val(),
             'source_url': $('#pdf_edit_source_url').val()
         };
-
-        $('.xblock-editor-error-message', element).html();
-        $('.xblock-editor-error-message', element).css('display', 'none');
+        
+        runtime.notify('save', {state: 'start'});
+        
         var handlerUrl = runtime.handlerUrl(element, 'save_pdf');
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
             if (response.result === 'success') {
-                window.location.reload(false);
+                runtime.notify('save', {state: 'end'});
+                // Reload the whole page :
+                // window.location.reload(false);
             } else {
-                $('.xblock-editor-error-message', element).html('Error: '+response.message);
-                $('.xblock-editor-error-message', element).css('display', 'block');
+                runtime.notify('error', {msg: response.message})
             }
         });
     });
