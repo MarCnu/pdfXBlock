@@ -23,7 +23,7 @@ class pdfXBlock(XBlock):
         help="This name appears in the horizontal navigation at the top of the page.")
 
     url = String(display_name="PDF URL",
-        default="https://cms.qut.edu.au/__data/assets/pdf_file/0003/16473/your-next-step.pdf",
+        default="https://www.bced.gov.bc.ca/exams/specs/resource_exams/precalc12/2013precalc_formula_page.pdf",
         scope=Scope.content,
         help="The URL for your PDF.")
     
