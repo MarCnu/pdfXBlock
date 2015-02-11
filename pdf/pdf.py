@@ -23,7 +23,7 @@ class pdfXBlock(XBlock):
         help="This name appears in the horizontal navigation at the top of the page.")
 
     url = String(display_name="PDF URL",
-        default="http://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf",
+        default="https://www.bced.gov.bc.ca/exams/specs/resource_exams/precalc12/2013precalc_formula_page.pdf",
         scope=Scope.content,
         help="The URL for your PDF.")
     
