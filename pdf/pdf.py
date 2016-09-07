@@ -73,7 +73,9 @@ class pdfXBlock(XBlock):
             'url': self.url,
             'allow_download': self.allow_download,
             'source_text': self.source_text,
-            'source_url': self.source_url
+            'source_url': self.source_url,
+            'thumbnail_url': self.thumbnail_url,
+            'display_description': self.display_description
         }
         html = self.render_template('static/html/pdf_view.html', context)
         
@@ -93,7 +95,9 @@ class pdfXBlock(XBlock):
             'url': self.url,
             'allow_download': self.allow_download,
             'source_text': self.source_text,
-            'source_url': self.source_url
+            'source_url': self.source_url,
+            'thumbnail_url': self.thumbnail_url,
+            'display_description': self.display_description
         }
         html = self.render_template('static/html/pdf_edit.html', context)
         
@@ -112,6 +116,8 @@ class pdfXBlock(XBlock):
         self.allow_download = True if data['allow_download'] == "True" else False # Str to Bool translation
         self.source_text = data['source_text']
         self.source_url = data['source_url']
+        self.display_description = data['display_description']
+        self.thumbnail_url = data['thumbnail_url']
         
         return {
             'result': 'success',
