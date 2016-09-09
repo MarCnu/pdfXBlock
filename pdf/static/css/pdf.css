@@ -1,5 +1,11 @@
 section#course-content.course-content {
-    width: 10% !important;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
 }
 
 .pdf-download-button {
