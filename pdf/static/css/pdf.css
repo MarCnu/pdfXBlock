@@ -1,3 +1,7 @@
+section#course-content.course-content {
+    width: 10% !important;
+}
+
 .pdf-download-button {
     margin: 0;
     margin-top: 15px;
