@@ -17,7 +17,6 @@ function pdfXBlockInitEdit(runtime, element) {
         data.append('source_url', $element.find('#pdf_edit_source_url').val());
         data.append('url', $element.find('#pdf_edit_url').val());
         data.append('allow_download', $element.find('#pdf_edit_allow_download').val());
-        data.append('source_url', $element.find('#pdf_edit_source_url').val());
         data.append('thumbnail', $element.find('input[name=thumbnail]')[0].files[0]);
 
         runtime.notify('save', {state: 'start'});
