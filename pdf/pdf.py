@@ -24,6 +24,11 @@ class pdfXBlock(XBlock, FileUploadMixin):
                           scope=Scope.settings,
                           help="This name appears in the horizontal navigation at the top of the page.")
 
+    display_description = String(display_name="Display Description",
+                          default="An XBlock to view PDFs",
+                          scope=Scope.settings,
+                          help="This description appears in the horizontal navigation at the top of the page.")
+
     url = String(display_name="PDF URL",
                  default="",
                  scope=Scope.content,
