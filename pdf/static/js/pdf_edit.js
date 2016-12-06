@@ -3,16 +3,16 @@ function pdfXBlockInitEdit(runtime, element) {
 
     var $element = $(element);
 
-    $(element).find('.action-cancel').bind('click', function () {
+    $element.find('.action-cancel').bind('click', function () {
         runtime.notify('cancel', {});
     });
 
-    $(element).find('.action-save').bind('click', function () {
+    $element.find('.action-save').bind('click', function () {
         var data = new FormData();
 
         data.append('usage_id', $element.data('usage-id'));
         data.append('display_name', $element.find('#pdf_edit_display_name').val());
-        data.append('display_description', $element.find('pdf_edit_display_description').val());
+        data.append('display_description', $element.find('#pdf_edit_display_description').val());
         data.append('source_text', $element.find('#pdf_edit_source_text').val());
         data.append('source_url', $element.find('#pdf_edit_source_url').val());
         data.append('url', $element.find('#pdf_edit_url').val());
