@@ -25,7 +25,7 @@ class pdfXBlock(XBlock, FileUploadMixin):
                           help="This name appears in the horizontal navigation at the top of the page.")
 
     url = String(display_name="PDF URL",
-                 default="http://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf",
+                 default="",
                  scope=Scope.content,
                  help="The URL for your PDF.")
 
