@@ -1,22 +1,29 @@
-<div class="pdf_block">
-    <h2>{{ display_name }}</h2>
-    <object data="{{ url }}" type="application/pdf" width="100%" height="600">
-        <p>
+<div class="pdf_block" >
+    {% if url != "" %}
+    <object data="{{ url }}" type="application/pdf" >
+        <p >
             It appears you don't have a PDF plugin for this browser.</a>
-        </p>
-    </object>
+        </p >
+    </object >
+    {% else %}
+    <div >
+        <p>Please provide a link to PDF</p>
+    </div >
+    {% endif %}
+
     {% if allow_download or source_url != "" %}
-    <ul>
+    <ul >
         {% if allow_download %}
-        <li class="pdf-download-button">
-            <a href="{{ url }}" download>Download the PDF</a>
-        </li>
+        <li class="pdf-download-button" >
+            <a href="{{ url }}" download >Download the PDF</a >
+        </li >
         {% endif %}
         {% if source_url != "" %}
-        <li class="pdf-download-button">
-            <a href="{{ source_url }}" download>{% if source_text == "" %}Download the source document{% else %}{{ source_text }}{% endif %}</a>
-        </li>
+        <li class="pdf-download-button" >
+            <a href="{{ source_url }}" download >{% if source_text == "" %}Download the source document{% else %}{{
+                source_text }}{% endif %}</a >
+        </li >
         {% endif %}
-    </ul>
+    </ul >
     {% endif %}
-</div>
+</div >
