@@ -11,17 +11,11 @@
     </div >
     {% endif %}
 
-    {% if allow_download or source_url != "" %}
+    {% if allow_download != "" %}
     <ul >
         {% if allow_download %}
         <li class="pdf-download-button" >
             <a href="{{ url }}" download >Download the PDF</a >
-        </li >
-        {% endif %}
-        {% if source_url != "" %}
-        <li class="pdf-download-button" >
-            <a href="{{ source_url }}" download >{% if source_text == "" %}Download the source document{% else %}{{
-                source_text }}{% endif %}</a >
         </li >
         {% endif %}
     </ul >

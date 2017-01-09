@@ -88,6 +88,9 @@ class pdfXBlock(XBlock, FileUploadMixin):
         }
         html = self.render_template('static/html/pdf_view.html', context)
 
+        if hasattr(self, 'thumbnail_url'):
+            print '///////////////////////////////////////' + str(self.thumbnail_url)
+
         frag = Fragment(html)
         frag.add_css(self.load_resource("static/css/pdf.css"))
         frag.add_javascript(self.load_resource("static/js/pdf_view.js"))
@@ -124,8 +127,6 @@ class pdfXBlock(XBlock, FileUploadMixin):
 
         if 'display_name' in data:
             self.display_name = data['display_name']
-        if 'url' in data:
-            self.url = data['url']
         if 'allow_download' in data:
             self.allow_download = True if data['allow_download'] == "True" else False  # Str to Bool translation
         if 'source_text' in data:
@@ -134,6 +135,12 @@ class pdfXBlock(XBlock, FileUploadMixin):
             self.source_url = data['source_url']
         if 'display_description' in data:
             self.display_description = data['display_description']
+
+        if 'pdf_file' in data:
+            block_id = data['usage_id']
+            if not isinstance(data['pdf_file'], basestring):
+                upload = data['pdf_file']
+                self.url = self.upload_to_s3('PDF', upload.file, block_id, self.url)
 
         if 'thumbnail' in data:
             block_id = data['usage_id']
