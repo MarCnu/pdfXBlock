@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-04 04:35+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "Display Name"
+msgstr "Dïspläý Nämé Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
+
+#: pdf/pdf.py
+msgid "PDF"
+msgstr "PDF Ⱡ'σяєм#"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "This name appears in the horizontal navigation at the top of the page."
+msgstr ""
+"Thïs nämé äppéärs ïn thé hörïzöntäl nävïgätïön ät thé töp öf thé pägé. "
+"Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "PDF URL"
+msgstr "PDF ÛRL Ⱡ'σяєм ιρѕυм #"
+
+#: pdf/pdf.py
+msgid "http://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf"
+msgstr ""
+"http://tütörïäl.mäth.lämär.édü/pdf/Trïg_Çhéät_Shéét.pdf Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "The URL for your PDF."
+msgstr "Thé ÛRL för ýöür PDF. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "PDF Download Allowed"
+msgstr "PDF Döwnlöäd Àllöwéd Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, #"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "Display a download button for this PDF."
+msgstr ""
+"Dïspläý ä döwnlöäd ßüttön för thïs PDF. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя#"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "Source document button text"
+msgstr "Söürçé döçümént ßüttön téxt Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
+
+#: pdf/pdf.py pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid ""
+"Add a download link for the source file of your PDF. Use it for example to "
+"provide the PowerPoint file used to create this PDF."
+msgstr ""
+"Àdd ä döwnlöäd lïnk för thé söürçé fïlé öf ýöür PDF. Ûsé ït för éxämplé tö "
+"prövïdé thé PöwérPöïnt fïlé üséd tö çréäté thïs PDF. Ⱡ'σяє#"
+
+#: pdf/pdf.py pdf/static/html/pdf_edit.html
+msgid "Source document URL"
+msgstr "Söürçé döçümént ÛRL Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт,#"
+
+#: pdf/static/html/pdf_edit.html
+msgid "True"
+msgstr "Trüé Ⱡ'σяєм ι#"
+
+#: pdf/static/html/pdf_edit.html
+msgid "False"
+msgstr "Fälsé Ⱡ'σяєм ιρѕ#"
+
+#: pdf/static/html/pdf_edit.html
+msgid "Default : Download the source document"
+msgstr ""
+"Défäült : Döwnlöäd thé söürçé döçümént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя#"
+
+#: pdf/static/html/pdf_edit.html
+msgid "Save"
+msgstr "Sävé Ⱡ'σяєм ι#"
+
+#: pdf/static/html/pdf_edit.html
+msgid "Cancel"
+msgstr "Çänçél Ⱡ'σяєм ιρѕυ#"
+
+#: pdf/static/html/pdf_view.html
+msgid "It appears you don't have a PDF plugin for this browser."
+msgstr ""
+"Ìt äppéärs ýöü dön't hävé ä PDF plügïn för thïs ßröwsér. Ⱡ'σяєм ιρѕυм ∂σłσя "
+"ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#: pdf/static/html/pdf_view.html
+msgid "Download the PDF"
+msgstr "Döwnlöäd thé PDF Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αм#"
+
+#: pdf/static/html/pdf_view.html
+msgid "Download the source document"
+msgstr "Döwnlöäd thé söürçé döçümént Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢#"

@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[xblocks.xblock-pdf]
+source_file = pdf/translations/en/LC_MESSAGES/text.po
+file_filter = pdf/translations/<lang>/LC_MESSAGES/text.po
+source_lang = en
+type = PO

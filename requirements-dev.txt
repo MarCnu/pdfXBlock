@@ -1,0 +1,16 @@
+# XBlock development requirements
+
+-e git+https://github.com/edx/xblock-utils.git@v1.1.1#egg=xblock-utils==1.1.1
+-e git+https://github.com/edx/xblock-sdk.git@v0.1.4#egg=xblock-sdk==0.1.4
+
+XBlock==1.2.1
+
+# Internationalization and Localization requirements
+Django==1.8
+transifex-client==0.12.1
+edx-i18n-tools==0.4.5
+pycodestyle==2.4.0
+pylint==0.28.0
+
+# Make available for tests and translations
+-e .
