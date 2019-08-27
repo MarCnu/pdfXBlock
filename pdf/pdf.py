@@ -28,6 +28,9 @@ class pdfXBlock(XBlock):
     # Icon of the XBlock. Values : [other (default), video, problem]
     icon_class = "other"
 
+    # Enable view as specific student
+    show_in_read_only_mode = True
+
     # Fields
     display_name = String(display_name=_("Display Name"),
         default=_("PDF"),
