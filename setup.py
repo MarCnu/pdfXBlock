@@ -32,7 +32,7 @@ setup(
     ],
     entry_points={
         'xblock.v1': [
-            'pdf = pdf:pdfXBlock',
+            'pdf = pdf.pdf:PDFXBlock',
         ]
     },
     package_data=package_data("pdf", ["static", "translations"]),
