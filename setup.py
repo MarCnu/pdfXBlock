@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='pdf-xblock',
-    version='0.2',
+    version='0.3',
     description='This XBlock provides an easy way to embed a PDF.',
     packages=[
         'pdf',
