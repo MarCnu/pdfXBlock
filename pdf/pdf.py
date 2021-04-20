@@ -83,7 +83,7 @@ class PDFXBlock(XBlock):
 
         resource_content = pkg_resources.resource_string(__name__,
                                                          resource_path)
-        return str(resource_content)
+        return resource_content.decode('utf-8')
 
     def render_template(self, path, context=None):
         """
