@@ -47,12 +47,11 @@ class pdfXBlock(XBlock):
     """
     Util functions
     """
-
     def load_resource(self, resource_path):
         """
         Gets the content of a resource
         """
-        resource_content = pkg_resources.resource_string(__name__, resource_path)
+        resource_content = pkg_resources.resource_string(__name__, resource_path).decode('utf-8')
         return str(resource_content)
 
     def render_template(self, template_path, context=None):
