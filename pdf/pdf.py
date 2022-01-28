@@ -4,70 +4,75 @@ import pkg_resources
 from django.template import Context, Template
 
 from xblock.core import XBlock
-from xblock.fields import Scope, Integer, String, Boolean
+from xblock.fields import Scope, String, Boolean
 from xblock.fragment import Fragment
 
-class pdfXBlock(XBlock):
 
-    '''
+class pdfXBlock(XBlock):
+    """
     Icon of the XBlock. Values : [other (default), video, problem]
-    '''
+    """
     icon_class = "other"
 
-    '''
+    """
     Fields
-    '''
+    """
     display_name = String(display_name="Display Name",
-        default="PDF",
-        scope=Scope.settings,
-        help="This name appears in the horizontal navigation at the top of the page.")
+                          default="PDF",
+                          scope=Scope.settings,
+                          help="This name appears in the horizontal navigation at the top of the page.")
 
     url = String(display_name="PDF URL",
-        default="http://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf",
-        scope=Scope.content,
-        help="The URL for your PDF.")
-    
-    allow_download = Boolean(display_name="PDF Download Allowed",
-        default=True,
-        scope=Scope.content,
-        help="Display a download button for this PDF.")
-    
-    source_text = String(display_name="Source document button text",
-        default="",
-        scope=Scope.content,
-        help="Add a download link for the source file of your PDF. Use it for example to provide the PowerPoint file used to create this PDF.")
-    
-    source_url = String(display_name="Source document URL",
-        default="",
-        scope=Scope.content,
-        help="Add a download link for the source file of your PDF. Use it for example to provide the PowerPoint file used to create this PDF.")
+                 default="http://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf",
+                 scope=Scope.content,
+                 help="The URL for your PDF.")
 
-    '''
+    allow_download = Boolean(display_name="PDF Download Allowed",
+                             default=True,
+                             scope=Scope.content,
+                             help="Display a download button for this PDF.")
+
+    source_text = String(display_name="Source document button text",
+                         default="",
+                         scope=Scope.content,
+                         help="Add a download link for the source file of your PDF. Use it for example to provide the "
+                              "PowerPoint file used to create this PDF.")
+
+    source_url = String(display_name="Source document URL",
+                        default="",
+                        scope=Scope.content,
+                        help="Add a download link for the source file of your PDF. Use it for example to provide the "
+                             "PowerPoint file used to create this PDF.")
+
+    """
     Util functions
-    '''
+    """
     def load_resource(self, resource_path):
         """
         Gets the content of a resource
         """
-        resource_content = pkg_resources.resource_string(__name__, resource_path)
-        return unicode(resource_content)
+        resource_content = pkg_resources.resource_string(__name__, resource_path).decode('utf-8')
+        return str(resource_content)
 
-    def render_template(self, template_path, context={}):
+    def render_template(self, template_path, context=None):
         """
         Evaluate a template by resource path, applying the provided context
         """
+        if context is None:
+            context = {}
         template_str = self.load_resource(template_path)
         return Template(template_str).render(Context(context))
 
-    '''
+    """
     Main functions
-    '''
+    """
+
     def student_view(self, context=None):
         """
         The primary view of the XBlock, shown to students
         when viewing courses.
         """
-        
+
         context = {
             'display_name': self.display_name,
             'url': self.url,
@@ -76,7 +81,7 @@ class pdfXBlock(XBlock):
             'source_url': self.source_url
         }
         html = self.render_template('static/html/pdf_view.html', context)
-        
+
         frag = Fragment(html)
         frag.add_css(self.load_resource("static/css/pdf.css"))
         frag.add_javascript(self.load_resource("static/js/pdf_view.js"))
@@ -96,7 +101,7 @@ class pdfXBlock(XBlock):
             'source_url': self.source_url
         }
         html = self.render_template('static/html/pdf_edit.html', context)
-        
+
         frag = Fragment(html)
         frag.add_javascript(self.load_resource("static/js/pdf_edit.js"))
         frag.initialize_js('pdfXBlockInitEdit')
@@ -109,10 +114,10 @@ class pdfXBlock(XBlock):
         """
         self.display_name = data['display_name']
         self.url = data['url']
-        self.allow_download = True if data['allow_download'] == "True" else False # Str to Bool translation
+        self.allow_download = True if data['allow_download'] == "True" else False  # Str to Bool translation
         self.source_text = data['source_text']
         self.source_url = data['source_url']
-        
+
         return {
             'result': 'success',
         }
